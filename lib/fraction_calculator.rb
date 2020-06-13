@@ -1,6 +1,6 @@
 
 def add(input)
-  fractions = input.split(',')
+  fractions = input.split(',').map{|fr| fr.split('/').map{|i| i.to_i } }
   numerator = numerate(fractions)
   denominator = denominate(fractions)
   gcd = numerator.gcd(denominator)
@@ -10,10 +10,9 @@ end
 
 
 def numerate(fractions)
-  (fractions[0].split('/')[0].to_i * fractions[1].split('/')[1].to_i) +
-  (fractions[0].split('/')[1].to_i * fractions[1].split('/')[0].to_i)
+  (fractions[0][0] * fractions[1][1]) + (fractions[0][1] * fractions[1][0])
 end
 
 def denominate(fractions)
-  fractions[0].split('/')[1].to_i * fractions[1].split('/')[1].to_i
+  fractions[0][1] * fractions[1][1]
 end
