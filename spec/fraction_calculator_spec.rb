@@ -10,5 +10,9 @@ describe 'FractionCalculator' do
     it '7/3 and 4/5' do
       expect(add('7/3, 4/5')).to eq '47/15'
     end
+
+    it '1/8 and 3/4' do
+      expect(add('1/8, 3/4')).to eq '7/8'
+    end
   end
 end
