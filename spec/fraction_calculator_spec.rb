@@ -6,13 +6,22 @@ require 'fraction_calculator'
 # operations exactly on fractions: add, subtract, multiply, divide
 
 describe 'FractionCalculator' do
-  context 'is able to add' do
-    it '7/3 and 4/5' do
-      expect(add('7/3, 4/5')).to eq '47/15'
+  describe 'is able to add' do
+    where(:input, :result) do
+      [
+        [
+          '7/3, 4/5', '47/15'
+        ],
+        [
+          '1/8, 3/4', '7/8'
+        ]
+      ]
     end
 
-    it '1/8 and 3/4' do
-      expect(add('1/8, 3/4')).to eq '7/8'
+    with_them do
+      it 'fractions' do
+        expect(add(input)).to eq result
+      end
     end
   end
 end
