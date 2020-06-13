@@ -3,8 +3,9 @@ def add(input)
   fractions = input.split(',')
   numerator = numerate(fractions)
   denominator = denominate(fractions)
+  gcd = numerator.gcd(denominator)
 
-  "#{numerator}/#{denominator}"
+  "#{numerator / gcd }/#{denominator / gcd }"
 end
 
 
