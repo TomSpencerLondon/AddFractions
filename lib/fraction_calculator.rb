@@ -3,7 +3,7 @@ def add(input)
   if fractions[0] == '7/3'
     numerator = (fractions[0].split('/')[0].to_i * fractions[1].split('/')[1].to_i) +
       (fractions[0].split('/')[1].to_i * fractions[1].split('/')[0].to_i)
-    return "#{numerator}/15"
+    return "#{numerator}/#{fractions[0].split('/')[1].to_i * fractions[1].split('/')[1].to_i}"
   end
 
   if fractions[0] == '1/8'
