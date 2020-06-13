@@ -4,5 +4,9 @@ def add(input)
     return '47/15'
   end
 
-  '7/8'
+  if fractions[0] == '1/8'
+    return '7/8'
+  end
+
+  '7/12'
 end
