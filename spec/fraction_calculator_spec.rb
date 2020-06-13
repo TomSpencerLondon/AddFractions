@@ -1,4 +1,5 @@
 # frozen_string_literal: true
+
 require 'fraction_calculator'
 
 # Write a program that adds fractions exactly

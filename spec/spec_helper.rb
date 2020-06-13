@@ -1,4 +1,5 @@
 # frozen_string_literal: true
+
 require 'rspec-parameterized'
 
 RSpec.configure do |config|
@@ -10,5 +11,4 @@ RSpec.configure do |config|
     mocks.verify_partial_doubles = true
   end
   config.shared_context_metadata_behavior = :apply_to_host_groups
-
 end
