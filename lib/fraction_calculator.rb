@@ -1,6 +1,5 @@
-
 def add(input)
-  fractions = input.split(',').map{|fr| fr.split('/').map{|i| i.to_i } }
+  fractions = input.split(',').map { |fr| fr.split('/').map { |i| i.to_i } }
   numerator = numerate(fractions)
   denominator = denominate(fractions)
   gcd = numerator.gcd(denominator)
@@ -14,9 +13,5 @@ def numerate(fractions)
 end
 
 def denominate(fractions)
-  result = 1
-  fractions.each do |i|
-    result *= i[1]
-  end
-  result
+  fractions.map {|fr| fr[1] }.inject(:*)
 end
