@@ -21,9 +21,6 @@ describe 'FractionCalculator' do
         ],
         [
           '5/6, 8/9', '31/18'
-        ],
-        [
-          '1/3, 1/4, 3/4', '4/3'
         ]
       ]
     end
